@@ -1,0 +1,29 @@
+.valid {
+    border: 1px solid lightseagreen
+}
+
+.invalid {
+    background-color: red;
+}
+
+input:valid{
+    border: 1px solid lightseagreen
+}
+input:invalid{
+    border: 1px solid tomato
+}
+
+.hide{
+    display: none;
+}
+
+.textarea {
+    width:100%;
+    padding:15px;
+    border-radius:15px;
+    border:1;
+    height:150px;
+    width:100%;
+    overflow: auto;
+}
+  

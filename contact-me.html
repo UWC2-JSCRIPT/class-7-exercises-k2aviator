@@ -2,9 +2,112 @@
 <html>
   <head>
     <title>Contact Me</title>
-  </head>
 
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="constraint-validation.css" />
+  </head>
   <body>
-    <!-- TODO -->
+    <div class="container">
+      <h1>Contact Me</h1>
+      <form id="connect-form" action="">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input
+            id="first-name"
+            class="form-control validate-input"
+            type="text"
+            name="first-name" 
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input
+            id="last-name"
+            class="form-control validate-input"
+            type="text"
+            name="last-name"
+            
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            class="form-control validate-input"
+            type="email"
+            name="email"
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+         <div class="form-group">
+          <label for="kind">Reason for contact</label>
+          <select class="form-control" name="kind" id="contact-kind">
+            <option value="choose" selected="selected" disabled>
+              Choose one
+            </option>
+            <option value="job">Job opportunity</option>
+            <option value="talk-code">Talk code</option>
+          </select>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <!---Hidden fields for reason for contacting-->
+        <div class="form group reason job hide" id="job">
+          <div>
+            <label for="job title">Job title</label>
+            <input
+            id="job-title"
+            class="form-control validate-input"
+            type="text"
+            name="job-title"
+            />
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div>
+            <label for="job website">Company website</label>
+            <input
+            id="website"
+            class="form-control validate-input"
+            type="url"
+            name="job-website"
+            />
+            <small class="error" aria-live="polite"></small>
+          </div>
+        </div>
+        <div class="form-group reason talk hide" id="talk">
+          <label for="talk">Coding language</label>
+          <select class="form-control" name="coding-language" id="language">
+            <option value="choose" selected="selected" disabled id="language">
+            Choose one
+            </option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+          </select>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div>&nbsp;</div>
+        <!---Text area-->
+        <div class="message">
+          <textarea class="textarea" rows="5" placeholder="Type custom message..."></textarea>
+        </div>
+        <div>&nbsp;</div>
+        <!---Sign up button-->
+        <div class="form-group">
+          <input class="btn btn-primary" type="submit" value="Sign up" />
+        </div>
+      </form>
+    </div>
+
+    <script src="contact-me.js"></script>
   </body>
 </html>

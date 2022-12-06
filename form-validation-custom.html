@@ -22,6 +22,7 @@
             class="form-control validate-input"
             type="text"
             name="first-name"
+            minlength="3"
             
           />
           <small class="error" aria-live="polite"></small>
@@ -34,6 +35,7 @@
             class="form-control validate-input"
             type="text"
             name="last-name"
+            minlength="3"
             
           />
           <small class="error" aria-live="polite"></small>
@@ -46,6 +48,7 @@
             class="form-control validate-input"
             type="email"
             name="email"
+            pattern = "\w+@\w+\.\w+"
           />
           <small class="error" aria-live="polite"></small>
         </div>
