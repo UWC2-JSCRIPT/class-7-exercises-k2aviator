@@ -3,14 +3,13 @@
   <head>
     <title>Form Validation</title>
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
     />
     <link rel="stylesheet" href="constraint-validation.css" />
   </head>
-
   <body>
     <div class="container">
       <h1>Connect With Us</h1>
@@ -21,8 +20,7 @@
             id="first-name"
             class="form-control validate-input"
             type="text"
-            name="first-name"
-            
+            name="first-name" 
           />
           <small class="error" aria-live="polite"></small>
         </div>
@@ -56,12 +54,31 @@
             <option value="choose" selected="selected" disabled>
               Choose one
             </option>
-            <option value="business">I'm interested in your software</option>
-            <option value="technical">I need technical support</option>
+            <option value="business" id="business">I'm interested in your software</option>
+            <option value="technical" id="technical">I need technical support</option>
           </select>
           <small class="error" aria-live="polite"></small>
         </div>
-
+        <div class="form-group business hide">
+          <label for="company-size">Number of people in company</label>
+          <input
+          id="company-size"
+          class="form-control validate-input"
+          typer="number"
+          name="company-size"
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="form-group technical hide">
+          <label for="support-type">What software are you using?</label>
+          <input
+          id="support-type"
+          class="form-control validate-input"
+          typer="number"
+          name="support-type"
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
         <div class="form-check mb-3">
           <input
             class="form-check-input"
@@ -75,7 +92,7 @@
 
         <div class="form-group">
           <label for="doge">How much DogeCoin u donate me?</label>
-          <input type="number" id="doge" min=20>
+          <input type="number" id="doge" min=20, max=40, step=2>
         </div>
 
         <div class="form-group">
